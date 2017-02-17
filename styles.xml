@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name">Quiz App</string>
+
+    <string name="first_question">Quiz App</string>
+    <string name="first_a_answer">Quiz App</string>
+    <string name="first_b_answer">Quiz App</string>
+    <string name="first_c_answer">Quiz App</string>
+    <string name="first_d_answer">Quiz App</string>
+
+    <string name="second_question">Quiz App</string>
+    <string name="second_a_answer">Quiz App</string>
+    <string name="second_b_answer">Quiz App</string>
+    <string name="second_c_answer">Quiz App</string>
+    <string name="second_d_answer">Quiz App</string>
+
+    <string name="third_question">Quiz App</string>
+    <string name="third_a_answer">Quiz App</string>
+    <string name="third_b_answer">Quiz App</string>
+    <string name="third_c_answer">Quiz App</string>
+    <string name="third_d_answer">Quiz App</string>
+
+    <string name="fourth_question">Quiz App</string>
+    <string name="fourth_a_answer">Quiz App</string>
+    <string name="fourth_b_answer">Quiz App</string>
+    <string name="fourth_c_answer">Quiz App</string>
+    <string name="fourth_d_answer">Quiz App</string>
+
+    <string name="fifth_question">Quiz App</string>
+    <string name="fifth_a_answer">Quiz App</string>
+    <string name="fifth_b_answer">Quiz App</string>
+    <string name="fifth_c_answer">Quiz App</string>
+    <string name="fifth_d_answer">Quiz App</string>
+
+    <string name="sixth_question">Quiz App</string>
+    <string name="sixth_a_answer">Quiz App</string>
+    <string name="sixth_b_answer">Quiz App</string>
+    <string name="sixth_c_answer">Quiz App</string>
+    <string name="sixth_d_answer">Quiz App</string>
+
+    <string name="seventh_question">Quiz App</string>
+    <string name="seventh_a_answer">Quiz App</string>
+    <string name="seventh_b_answer">Quiz App</string>
+    <string name="seventh_c_answer">Quiz App</string>
+    <string name="seventh_d_answer">Quiz App</string>
+
+    <string name="eighth_question">Quiz App</string>
+    <string name="eighth_a_answer">Quiz App</string>
+    <string name="eighth_b_answer">Quiz App</string>
+    <string name="eighth_c_answer">Quiz App</string>
+    <string name="eighth_d_answer">Quiz App</string>
+
+    <string name="ninth_question">Quiz App</string>
+    <string name="ninth_a_answer">Quiz App</string>
+    <string name="ninth_b_answer">Quiz App</string>
+    <string name="ninth_c_answer">Quiz App</string>
+    <string name="ninth_d_answer">Quiz App</string>
+
+    <string name="tenth_question">Quiz App</string>
+    <string name="tenth_a_answer">Quiz App</string>
+    <string name="tenth_b_answer">Quiz App</string>
+    <string name="tenth_c_answer">Quiz App</string>
+    <string name="tenth_d_answer">Quiz App</string>
+
+    <string name="confirm">Comfirm</string>
+
+
+</resources>
