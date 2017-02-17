@@ -1,65 +1,65 @@
 <resources>
     <string name="app_name">Quiz App</string>
 
-    <string name="first_question">Quiz App</string>
-    <string name="first_a_answer">Quiz App</string>
-    <string name="first_b_answer">Quiz App</string>
-    <string name="first_c_answer">Quiz App</string>
-    <string name="first_d_answer">Quiz App</string>
+    <string name="first_question">1: When Intel Corporation was founded?</string>
+    <string name="first_a_answer">2001</string>
+    <string name="first_b_answer">1958</string>
+    <string name="first_c_answer">1968</string>
+    <string name="first_d_answer">1982</string>
 
-    <string name="second_question">Quiz App</string>
-    <string name="second_a_answer">Quiz App</string>
-    <string name="second_b_answer">Quiz App</string>
-    <string name="second_c_answer">Quiz App</string>
-    <string name="second_d_answer">Quiz App</string>
+    <string name="second_question">2: In which state Intels headquarter is placed?</string>
+    <string name="second_a_answer">Alabama</string>
+    <string name="second_b_answer">California</string>
+    <string name="second_c_answer">Washington</string>
+    <string name="second_d_answer">New York</string>
 
-    <string name="third_question">Quiz App</string>
-    <string name="third_a_answer">Quiz App</string>
-    <string name="third_b_answer">Quiz App</string>
-    <string name="third_c_answer">Quiz App</string>
-    <string name="third_d_answer">Quiz App</string>
+    <string name="third_question">3: Intel Corporation was founded by:</string>
+    <string name="third_a_answer">Andy Grove and Max Palevsky</string>
+    <string name="third_b_answer">Paul Otellini</string>
+    <string name="third_c_answer">Federico Faggin</string>
+    <string name="third_d_answer">Robert Noyce and Gordon Moore</string>
 
-    <string name="fourth_question">Quiz App</string>
-    <string name="fourth_a_answer">Quiz App</string>
-    <string name="fourth_b_answer">Quiz App</string>
-    <string name="fourth_c_answer">Quiz App</string>
-    <string name="fourth_d_answer">Quiz App</string>
+    <string name="fourth_question">4: What was the first name of Intel company?</string>
+    <string name="fourth_a_answer">Moore Noyce</string>
+    <string name="fourth_b_answer">NM Electronics</string>
+    <string name="fourth_c_answer">Intel</string>
+    <string name="fourth_d_answer">Intelco</string>
 
-    <string name="fifth_question">Quiz App</string>
-    <string name="fifth_a_answer">Quiz App</string>
-    <string name="fifth_b_answer">Quiz App</string>
-    <string name="fifth_c_answer">Quiz App</string>
-    <string name="fifth_d_answer">Quiz App</string>
+    <string name="fifth_question">5: What does "Intel" stand for?</string>
+    <string name="fifth_a_answer">Innovate Electronics</string>
+    <string name="fifth_b_answer">Integrated Electronics</string>
+    <string name="fifth_c_answer">Infinite Electronics</string>
+    <string name="fifth_d_answer">Indeed Electronics</string>
 
-    <string name="sixth_question">Quiz App</string>
-    <string name="sixth_a_answer">Quiz App</string>
-    <string name="sixth_b_answer">Quiz App</string>
-    <string name="sixth_c_answer">Quiz App</string>
-    <string name="sixth_d_answer">Quiz App</string>
+    <string name="sixth_question">6: Intels  first commercially available microprocessor was:</string>
+    <string name="sixth_a_answer">Intel 80286</string>
+    <string name="sixth_b_answer">Intel 8086</string>
+    <string name="sixth_c_answer">Intel 4004</string>
+    <string name="sixth_d_answer">Intel Pentium</string>
 
-    <string name="seventh_question">Quiz App</string>
-    <string name="seventh_a_answer">Quiz App</string>
-    <string name="seventh_b_answer">Quiz App</string>
-    <string name="seventh_c_answer">Quiz App</string>
-    <string name="seventh_d_answer">Quiz App</string>
+    <string name="seventh_question">7: What is a microarchitecture of Intel Pentiums?</string>
+    <string name="seventh_a_answer">P3</string>
+    <string name="seventh_b_answer">P6</string>
+    <string name="seventh_c_answer">P4</string>
+    <string name="seventh_d_answer">P5</string>
 
-    <string name="eighth_question">Quiz App</string>
-    <string name="eighth_a_answer">Quiz App</string>
-    <string name="eighth_b_answer">Quiz App</string>
-    <string name="eighth_c_answer">Quiz App</string>
-    <string name="eighth_d_answer">Quiz App</string>
+    <string name="eighth_question">8: When Intel began shipping its first SSDs?</string>
+    <string name="eighth_a_answer">2000</string>
+    <string name="eighth_b_answer">2005</string>
+    <string name="eighth_c_answer">2008</string>
+    <string name="eighth_d_answer">2010</string>
 
-    <string name="ninth_question">Quiz App</string>
-    <string name="ninth_a_answer">Quiz App</string>
-    <string name="ninth_b_answer">Quiz App</string>
-    <string name="ninth_c_answer">Quiz App</string>
-    <string name="ninth_d_answer">Quiz App</string>
+    <string name="ninth_question">9: Which security firm did Intel buy in 2010?</string>
+    <string name="ninth_a_answer">Symantec</string>
+    <string name="ninth_b_answer">McAfee</string>
+    <string name="ninth_c_answer">Check Point</string>
+    <string name="ninth_d_answer">Remedy</string>
 
-    <string name="tenth_question">Quiz App</string>
-    <string name="tenth_a_answer">Quiz App</string>
-    <string name="tenth_b_answer">Quiz App</string>
-    <string name="tenth_c_answer">Quiz App</string>
-    <string name="tenth_d_answer">Quiz App</string>
+    <string name="tenth_question">10: The Intel Extreme Masters (IEM) is:</string>
+    <string name="tenth_a_answer">a series of international esports tournaments</string>
+    <string name="tenth_b_answer">an extreme sports competitions</string>
+    <string name="tenth_c_answer">a series of tournaments for developers</string>
+    <string name="tenth_d_answer">a chess competitions</string>
 
     <string name="confirm">Comfirm</string>
 
