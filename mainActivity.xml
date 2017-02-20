@@ -28,6 +28,16 @@
             android:layout_gravity="center"
             android:text="@string/first_question" />
 
+        <TextView
+            android:id="@+id/firstCountDTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:layout_gravity="center"
+            android:gravity="bottom|center"
+            />
+
         <ProgressBar
             android:id="@+id/first_progress_bar"
             style="?android:progressBarStyleHorizontal"
@@ -35,7 +45,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:indeterminate="false"
-            android:max="30"
+            android:max="3000"
             android:progress="0" />
 
         <RadioGroup
@@ -104,6 +114,16 @@
             android:textSize="20sp"
             android:text="@string/second_question" />
 
+        <TextView
+            android:id="@+id/secondCountDTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:layout_gravity="center"
+            android:gravity="bottom|center"
+            />
+
         <ProgressBar
             android:id="@+id/second_progress_bar"
             style="?android:progressBarStyleHorizontal"
@@ -111,7 +131,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:indeterminate="false"
-            android:max="30"
+            android:max="3000"
             android:progress="0" />
 
         <RadioGroup
@@ -179,6 +199,16 @@
             android:textSize="20sp"
             android:text="@string/third_question" />
 
+        <TextView
+            android:id="@+id/thirdCountDTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:layout_gravity="center"
+            android:gravity="bottom|center"
+            />
+
         <ProgressBar
             android:id="@+id/third_progress_bar"
             style="?android:progressBarStyleHorizontal"
@@ -186,7 +216,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:indeterminate="false"
-            android:max="30"
+            android:max="3000"
             android:progress="0" />
 
         <RadioGroup
@@ -256,6 +286,16 @@
             android:textSize="20sp"
             android:text="@string/fourth_question" />
 
+        <TextView
+            android:id="@+id/fourthCountDTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:layout_gravity="center"
+            android:gravity="bottom|center"
+            />
+
         <ProgressBar
             android:id="@+id/fourth_progress_bar"
             style="?android:progressBarStyleHorizontal"
@@ -263,7 +303,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:indeterminate="false"
-            android:max="30"
+            android:max="3000"
             android:progress="0" />
 
         <RadioGroup
@@ -332,6 +372,16 @@
             android:textSize="20sp"
             android:text="@string/fifth_question" />
 
+        <TextView
+            android:id="@+id/fifthCountDTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:layout_gravity="center"
+            android:gravity="bottom|center"
+            />
+
         <ProgressBar
             android:id="@+id/fifth_progress_bar"
             style="?android:progressBarStyleHorizontal"
@@ -339,7 +389,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:indeterminate="false"
-            android:max="30"
+            android:max="3000"
             android:progress="0" />
 
         <RadioGroup
@@ -408,6 +458,16 @@
             android:textSize="20sp"
             android:text="@string/sixth_question" />
 
+        <TextView
+            android:id="@+id/sixthCountDTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:layout_gravity="center"
+            android:gravity="bottom|center"
+            />
+
         <ProgressBar
             android:id="@+id/sixth_progress_bar"
             style="?android:progressBarStyleHorizontal"
@@ -415,7 +475,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:indeterminate="false"
-            android:max="30"
+            android:max="3000"
             android:progress="0" />
 
         <RadioGroup
@@ -484,6 +544,16 @@
             android:textSize="20sp"
             android:text="@string/seventh_question" />
 
+        <TextView
+            android:id="@+id/seventhCountDTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:layout_gravity="center"
+            android:gravity="bottom|center"
+            />
+
         <ProgressBar
             android:id="@+id/seventh_progress_bar"
             style="?android:progressBarStyleHorizontal"
@@ -491,7 +561,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:indeterminate="false"
-            android:max="30"
+            android:max="3000"
             android:progress="0" />
 
         <RadioGroup
@@ -560,6 +630,16 @@
             android:textSize="20sp"
             android:text="@string/eighth_question" />
 
+        <TextView
+            android:id="@+id/eighthCountDTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:layout_gravity="center"
+            android:gravity="bottom|center"
+            />
+
         <ProgressBar
             android:id="@+id/eighth_progress_bar"
             style="?android:progressBarStyleHorizontal"
@@ -567,7 +647,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:indeterminate="false"
-            android:max="30"
+            android:max="3000"
             android:progress="0" />
 
         <RadioGroup
@@ -636,6 +716,16 @@
             android:textSize="20sp"
             android:text="@string/ninth_question" />
 
+        <TextView
+            android:id="@+id/ninthCountDTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:layout_gravity="center"
+            android:gravity="bottom|center"
+            />
+
         <ProgressBar
             android:id="@+id/ninth_progress_bar"
             style="?android:progressBarStyleHorizontal"
@@ -643,7 +733,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:indeterminate="false"
-            android:max="30"
+            android:max="3000"
             android:progress="0" />
 
         <RadioGroup
@@ -712,6 +802,16 @@
             android:textSize="20sp"
             android:text="@string/tenth_question" />
 
+        <TextView
+            android:id="@+id/tenthCountDTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:layout_gravity="center"
+            android:gravity="bottom|center"
+            />
+
         <ProgressBar
             android:id="@+id/tenth_progress_bar"
             style="?android:progressBarStyleHorizontal"
@@ -719,7 +819,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:indeterminate="false"
-            android:max="30"
+            android:max="3000"
             android:progress="0" />
 
         <RadioGroup
