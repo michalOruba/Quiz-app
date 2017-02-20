@@ -19,11 +19,13 @@ import static android.os.Build.VERSION_CODES.M;
 import static android.view.View.GONE;
 
 public class MainActivity extends AppCompatActivity {
+
     private ProgressBar mProgress;
     private CountDownTimer countTD;
     private int progressTimeLeft;
     private int correctAnswers = 0;
     private int layoutID = R.id.first_layout;
+    private int countDText = R.id.firstCountDTextView;
     private int progressBarID = R.id.first_progress_bar;
     private int AAnswerID = R.id.first_AAnswer;
     private int BAnswerID = R.id.first_BAnswer;
@@ -33,44 +35,53 @@ public class MainActivity extends AppCompatActivity {
     private int[] answers = {R.id.first_CAnswer, R.id.second_BAnswer, R.id.third_DAnswer, R.id.fourth_BAnswer, R.id.fifth_BAnswer, R.id.sixth_CAnswer,
             R.id.seventh_DAnswer, R.id.eighth_CAnswer, R.id.ninth_BAnswer, R.id.tenth_AAnswer};
 
+    private RadioButton firstRadio;
+    private RadioButton secondRadio;
+    private RadioButton thirdRadio;
+    private RadioButton lastRadio;
+    private ViewGroup firstViewGroup;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        countTD = new CountDownTimer(30000, 1000) {
+        //CountDownTimer set to 30 sec, intersec 10ms to make progress bar look smoother.
+        countTD = new CountDownTimer(30000, 10) {
             public void onTick(long millisUntilFinished) {
-
-                Log.v("Main activity", "Wchodzę do onTick");
                 mProgress = (ProgressBar) findViewById(progressBarID);
-                progressTimeLeft = (int) millisUntilFinished / 1000;
-                mProgress.setProgress(progressTimeLeft);
-                Log.v("Main activity", "Wychodzę do onTick" + progressTimeLeft);
+                progressTimeLeft = (int) millisUntilFinished / 1000;            //1 sec
+                mProgress.setProgress((int) millisUntilFinished / 10);          //0,01sec
+                TextView countDTextView = (TextView) findViewById(countDText);  //Display time left in textView
+                countDTextView.setText(Integer.toString(progressTimeLeft));
             }
 
             public void onFinish() {
-                counter++;
+                counter++;                                                      //Counts questions.
+                firstRadio = (RadioButton) findViewById(AAnswerID);
+                secondRadio = (RadioButton) findViewById(BAnswerID);
+                thirdRadio = (RadioButton) findViewById(CAnswerID);
+                lastRadio = (RadioButton) findViewById(DAnswerID);
 
-                RadioButton firstRadio = (RadioButton) findViewById(AAnswerID);
-                RadioButton secondRadio = (RadioButton) findViewById(BAnswerID);
-                RadioButton thirdRadio = (RadioButton) findViewById(CAnswerID);
-                RadioButton lastRadio = (RadioButton) findViewById(DAnswerID);
-
-
+                //Case when non answer is checked.
                 if (progressTimeLeft == 0 && !firstRadio.isChecked() && !secondRadio.isChecked() && !thirdRadio.isChecked() &&
                         !lastRadio.isChecked()) {
-                    Toast.makeText(getApplicationContext(), "Time run out. Go to next question.", Toast.LENGTH_SHORT).show();
-                    ViewGroup firstViewGroup = (ViewGroup) findViewById(layoutID);
+                    Toast.makeText(getApplicationContext(), "Time run out. Next question.", Toast.LENGTH_SHORT).show();
+                    //Set current viewGroup to be gone.
+                    firstViewGroup = (ViewGroup) findViewById(layoutID);
                     firstViewGroup.setVisibility(GONE);
-                    if (counter == 10) {
+                    if (counter == 10) {                                        //If 10th question, go to results.
                         displayResults(correctAnswers);
                         return;
                     }
                 }
+                //Case when answer is checked.
                 else {
-                    ViewGroup firstViewGroup = (ViewGroup) findViewById(layoutID);
+                    //Set current viewGroup to be gone.
+                    firstViewGroup = (ViewGroup) findViewById(layoutID);
                     firstViewGroup.setVisibility(GONE);
 
+                    //Compare checked answer with correct answers in the answers table.
                     if (firstRadio.isChecked() && AAnswerID == answers[counter - 1]) {
                         correctAnswers++;
                     }
@@ -83,43 +94,49 @@ public class MainActivity extends AppCompatActivity {
                     if (lastRadio.isChecked() && DAnswerID == answers[counter - 1]) {
                         correctAnswers++;
                     }
-                    if (counter == 10) {
+                    if (counter == 10) {                                        //If 10th question, go to results.
                         displayResults(correctAnswers);
                         return;
                     }
-                    Toast.makeText(getApplicationContext(), "Go to next question.", Toast.LENGTH_SHORT).show();
-                    layoutID += 6;
-                    ViewGroup nextViewGroup = (ViewGroup) findViewById(layoutID);
-                    nextViewGroup.setVisibility(View.VISIBLE);
-                    progressBarID += 6;
-                    AAnswerID += 6;
-                    BAnswerID += 6;
-                    CAnswerID += 6;
-                    DAnswerID += 6;
-                    countTD.onTick(30000);
-                    mProgress.setProgress(30);
-                    countTD.start();
-
                 }
+                //Increse all ID's by 7, becouse each groupView has 7 different objects with ID's.
+                layoutID += 7;
+                countDText += 7;
+                progressBarID += 7;
+                AAnswerID += 7;
+                BAnswerID += 7;
+                CAnswerID += 7;
+                DAnswerID += 7;
+                ViewGroup nextViewGroup = (ViewGroup) findViewById(layoutID);
+                nextViewGroup.setVisibility(View.VISIBLE);
+                countTD.onTick(30000);
+                mProgress.setProgress(30);
+                countTD.start();
+
+
             }
         }.start();
     }
 
     public void confirmAnswer(View view) {
-        RadioButton firstRadio = (RadioButton) findViewById(AAnswerID);
-        RadioButton secondRadio = (RadioButton) findViewById(BAnswerID);
-        RadioButton thirdRadio = (RadioButton) findViewById(CAnswerID);
-        RadioButton lastRadio = (RadioButton) findViewById(DAnswerID);
+        firstRadio = (RadioButton) findViewById(AAnswerID);
+        secondRadio = (RadioButton) findViewById(BAnswerID);
+        thirdRadio = (RadioButton) findViewById(CAnswerID);
+        lastRadio = (RadioButton) findViewById(DAnswerID);
+
+        //If no answer is checked, than display Toast, and resume countdown.
         if (!firstRadio.isChecked() && !secondRadio.isChecked() && !thirdRadio.isChecked() &&
                 !lastRadio.isChecked()) {
             Toast.makeText(getApplicationContext(), "Select an answer first.", Toast.LENGTH_SHORT).show();
             countTD.onTick(progressTimeLeft);
-        } else {
+        }
+        //If answer is checked, than stop countdown, and go to onFinish.
+        else {
             countTD.cancel();
             countTD.onFinish();
         }
     }
-
+    //Displays results.
     public void displayResults(int result) {
         TextView textView = (TextView) findViewById(R.id.results);
         textView.setVisibility(View.VISIBLE);
