@@ -276,7 +276,7 @@ public class MainActivity extends AppCompatActivity {
     public void displayResults(int result) {
         TextView textView = (TextView) findViewById(R.id.results);
         textView.setVisibility(View.VISIBLE);
-        textView.setText("Twój wynik to: \n" + result);
+        textView.setText("Your score is: \n" + result);
         ImageView imageView = (ImageView) findViewById(R.id.intel_logo);
         imageView.setVisibility(View.VISIBLE);
     }
