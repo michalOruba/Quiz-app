@@ -44,6 +44,9 @@ public class MainActivity extends AppCompatActivity {
     static final String STATE_EIGHTLAYOUT = "eighthLayout";
     static final String STATE_NINTHLAYOUT = "ninthLayout";
     static final String STATE_TENTHLAYOUT = "tenthLayout";
+    static final String STATE_RESULTTEXTVIEW = "resultTextView";
+    static final String STATE_RESULTIMAGEVIEW = "resultImageView";
+    static final String STATE_RESULTTEXTVIEWTEXT = "resultTextViewText";
 
     private ProgressBar mProgress;
     private CountDownTimer countTD;
@@ -76,6 +79,8 @@ public class MainActivity extends AppCompatActivity {
     private ViewGroup ninthLayout;
     private ViewGroup tenthLayout;
     private ProgressBar firstProgressBar;
+    private TextView resultTextView;
+    private ImageView resultImageView;
 
     public void onSaveInstanceState(Bundle savedInstanceState) {
         firstLayout = (ViewGroup) findViewById(R.id.first_layout);
@@ -88,6 +93,8 @@ public class MainActivity extends AppCompatActivity {
         eighthLayout = (ViewGroup) findViewById(R.id.eighth_layout);
         ninthLayout = (ViewGroup) findViewById(R.id.ninth_layout);
         tenthLayout = (ViewGroup) findViewById(R.id.tenth_layout);
+        resultTextView = (TextView) findViewById(R.id.results);
+        resultImageView = (ImageView) findViewById(R.id.intel_logo);
 
         firstProgressBar = (ProgressBar) findViewById(R.id.first_progress_bar);
         savedInstanceState.putInt(STATE_PROGRESSSTATUS, firstProgressBar.getProgress());
@@ -114,6 +121,11 @@ public class MainActivity extends AppCompatActivity {
         savedInstanceState.putInt(STATE_EIGHTLAYOUT, eighthLayout.getVisibility());
         savedInstanceState.putInt(STATE_NINTHLAYOUT, ninthLayout.getVisibility());
         savedInstanceState.putInt(STATE_TENTHLAYOUT, tenthLayout.getVisibility());
+        savedInstanceState.putInt(STATE_NINTHLAYOUT, ninthLayout.getVisibility());
+        savedInstanceState.putInt(STATE_TENTHLAYOUT, tenthLayout.getVisibility());
+        savedInstanceState.putInt(STATE_RESULTIMAGEVIEW, resultImageView.getVisibility());
+        savedInstanceState.putInt(STATE_RESULTTEXTVIEW, resultTextView.getVisibility());
+        savedInstanceState.putCharSequence(STATE_RESULTTEXTVIEWTEXT, resultTextView.getText());
 
         timerPause();
         super.onSaveInstanceState(savedInstanceState);
@@ -131,6 +143,8 @@ public class MainActivity extends AppCompatActivity {
         eighthLayout = (ViewGroup) findViewById(R.id.eighth_layout);
         ninthLayout = (ViewGroup) findViewById(R.id.ninth_layout);
         tenthLayout = (ViewGroup) findViewById(R.id.tenth_layout);
+        resultTextView = (TextView) findViewById(R.id.results);
+        resultImageView = (ImageView) findViewById(R.id.intel_logo);
 
         firstProgressBar = (ProgressBar) findViewById(R.id.first_progress_bar);
         firstProgressBar.setProgress(savedInstanceState.getInt(STATE_PROGRESSSTATUS));
@@ -157,6 +171,9 @@ public class MainActivity extends AppCompatActivity {
         eighthLayout.setVisibility(savedInstanceState.getInt(STATE_EIGHTLAYOUT));
         ninthLayout.setVisibility(savedInstanceState.getInt(STATE_NINTHLAYOUT));
         tenthLayout.setVisibility(savedInstanceState.getInt(STATE_TENTHLAYOUT));
+        resultImageView.setVisibility(savedInstanceState.getInt(STATE_RESULTIMAGEVIEW));
+        resultTextView.setVisibility(savedInstanceState.getInt(STATE_RESULTTEXTVIEW));
+        resultTextView.setText(savedInstanceState.getCharSequence(STATE_RESULTTEXTVIEWTEXT));
 
         timerPause();                   //Cancels onCreate timerStart()
         timerResume();                  //Restores saved countdown
@@ -249,8 +266,11 @@ public class MainActivity extends AppCompatActivity {
         countTD.cancel();
     }
     //Start countDownTimer with saved time left
+    //If prevents from starting countDownTimer after reaching results
     private void timerResume() {
-        timerStart(milisLeft);
+        if (counter<10) {
+            timerStart(milisLeft);
+        }
     }
 
 
@@ -274,6 +294,7 @@ public class MainActivity extends AppCompatActivity {
 
     //Displays results.
     public void displayResults(int result) {
+        countTD.cancel();
         TextView textView = (TextView) findViewById(R.id.results);
         textView.setVisibility(View.VISIBLE);
         textView.setText("Your score is: \n" + result);
